@@ -38,11 +38,11 @@ const D3Shapes = () => {
       );
 
     svg2
-      .selectAll("square")
+      .selectAll("rect")
       .data(data2)
       .join(
         //add attr to both entering and updating
-        (enter) => enter.append("square"),
+        (enter) => enter.append("rect"),
         (update) => update.attr("class", "updated2"),
         (exit) => exit.remove()
       )
