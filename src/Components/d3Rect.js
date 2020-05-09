@@ -14,28 +14,28 @@ const D3Rect = () => {
   
     //find all circles and sync with data
     //.join allows you to control enter, update and exit patterns
-    // svg
-    //   .selectAll("circle")
-    //   .data(data)
-    //   .join(
-    //     //add attr to circles entering, not existing
-    //     (enter) =>
-    //       enter
-    //         .append("circle")
-    //         .attr("r", (value) => value)
-    //         .attr("cx", (value) => value * 3)
-    //         .attr("cy", (value) => value * 1)
-    //         .attr("stroke", "red"),
-    //     //updates existing elements
-    //     (update) =>
-    //       update
-    //         .attr("class", "updated")
-    //         .attr("r", (value) => value)
-    //         .attr("cy", (value) => value * 1)
-    //         .attr("stroke", "yellow"),
-    //     //default, do not need, but could use to animate exiting elements
-    //     (exit) => exit.remove()
-    //   );
+    svg
+      .selectAll("circle")
+      .data(data)
+      .join(
+        //add attr to circles entering, not existing
+        (enter) =>
+          enter
+            .append("circle")
+            .attr("r", (value) => value)
+            .attr("cx", (value) => value * 3)
+            .attr("cy", (value) => value * 1)
+            .attr("stroke", "red"),
+        //updates existing elements
+        (update) =>
+          update
+            .attr("class", "updated")
+            .attr("r", (value) => value)
+            .attr("cy", (value) => value * 1)
+            .attr("stroke", "yellow"),
+        //default, do not need, but could use to animate exiting elements
+        (exit) => exit.remove()
+      );
 
     svg
       .selectAll("rect")
