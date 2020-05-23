@@ -5,8 +5,9 @@ const D3Shapes = () => {
   const [data, setData] = useState([24, 43, 50, 17]);
   const data2 = [10, 33, 12, 170];
   const svgRef = useRef();
+console.log(`data`, data)
 
-  console.log(data)
+  console.log(`svgRef`,svgRef)
 
   useEffect(() => {
     //select gives me access to d3
@@ -50,7 +51,10 @@ const D3Shapes = () => {
       .attr("cx", (value) => value * 4)
       .attr("cy", (value) => value * 1)
       .attr("stroke", "green");
-      console.log(svg.selectAll("circle").data(data));
+      console.log(`circles`, svg.selectAll("circle").data(data));
+      console.log(`circles`, svg.selectAll("circle"));
+
+      console.log(`svg`,svg)
     //can see Enter, Update (-groups), Exit
   }, [data]);
 
