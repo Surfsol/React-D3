@@ -5,6 +5,7 @@ import D3Rect from './Components/d3Rect'
 import D3Line from './Components/D3Line'
 import Practice from './Components/javascript'
 import BarChart from './Components/AnimatedBarChart'
+import BarChartAdd from './Components/BarChartAdd'
 
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
    <D3Line/>
    <Practice/>
    <BarChart/>
+   <BarChartAdd/>
    </div>
    </>
   );
