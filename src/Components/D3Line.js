@@ -12,6 +12,7 @@ const D3Line = () => {
   const [data, setData] = useState([24, 43, 50, 17, 45, 32, 45]);
 
   const svgRef = useRef();
+  console.log(`svgRef.current`,svgRef)
 
   useEffect(() => {
     //select gives me access to d3
@@ -64,9 +65,10 @@ const D3Line = () => {
       .attr("x", (value) => value * 2)
       .attr("y", (value) => value * 2)
       .attr("fill", "rgb(0,0,255)");
-    console.log(svg.selectAll("rect").data(data));
+    console.log(svg.selectAll("rect").data(data)); console.log(`svgRef.current`,svg)
     //can see Enter, Update (-groups), Exit
   }, [data]);
+ 
 
   return (
     <div style={{ width: 500 }}>
