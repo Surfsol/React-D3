@@ -56,14 +56,17 @@ function BarChart() {
         svg
           .selectAll(".toolTip")
           .data([value])
-          .join((enter) => enter.append("text").attr("y", yScale(value) - 4))
+          .join((enter) => enter.append("text")
+          .attr("y", yScale(value)))
           .attr("class", "toolTip")
           .text(value)
           .attr("x", xScale(index) + xScale.bandwidth() / 2)
+          //position of value, should be a y position -8 to make higher than bar
           .attr("y", yScale(value) - 8)
           .attr("text-anchor", "middle")
           .transition()
-          .attr("opacity", 1);
+          .attr("opacity", 1)
+          .attr('stroke', 'blue');
       })
       .on("mouseleave", () => {
         svg.select(".toolTip").remove();
