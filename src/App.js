@@ -6,8 +6,9 @@ import D3Line from './Components/D3Line'
 import Practice from './Components/javascript'
 import BarChart from './Components/AnimatedBarChart'
 import BarChartAdd from './Components/BarChartAdd'
+import ResponsiveParent from './Components/ResponsiveParent'
 
-import './App.css';
+//import './App.css';
 
 
 
@@ -27,7 +28,9 @@ function App() {
    <Practice/>
    <BarChart/>
    <BarChartAdd/>
+  
    </div>
+   <ResponsiveParent/>
    </>
   );
 }
